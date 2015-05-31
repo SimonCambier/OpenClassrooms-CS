@@ -10,6 +10,13 @@ namespace TP_c_est_le_week_end
     {
         static void Main(string[] args)
         {
+
+        }       
+        static string MessagePourUtilisateur()
+        {
+            string nomutilisateur = Environment.UserName;
+            string mbjrsem = Console.WriteLine("Bonjour " + nomutilisateur + ".");
+
         }
     }
 }
