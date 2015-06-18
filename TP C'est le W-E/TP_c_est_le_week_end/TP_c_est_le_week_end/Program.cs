@@ -10,13 +10,36 @@ namespace TP_c_est_le_week_end
     {
         static void Main(string[] args)
         {
-
+            string aun = MsgToUser1();
+            if (DateTime.Now.DayOfWeek == DayOfWeek.Monday || DateTime.Now.DayOfWeek == DayOfWeek.Tuesday || DateTime.Now.DayOfWeek == DayOfWeek.Wednesday || DateTime.Now.DayOfWeek == DayOfWeek.Thursday)
+            {
+                if (DateTime.Now.Hour >= 9 && DateTime.Now.Hour <= 18)
+                {
+                    Console.WriteLine("Bonjour " + aun + ".");
+                }
+                else
+                {
+                    Console.WriteLine("Bonsoir " + aun + ".");
+                }
+            }
+            if (DateTime.Now.DayOfWeek == DayOfWeek.Friday && DateTime.Now.Hour >= 9 && DateTime.Now.Hour <= 18)
+            {
+                Console.WriteLine("Bonjour " + aun + ".");
+            }
+            if (DateTime.Now.DayOfWeek == DayOfWeek.Friday && DateTime.Now.Hour > 18)
+            {
+                Console.WriteLine("Bon week-end " + aun + ".");
+            }
+            if (DateTime.Now.DayOfWeek == DayOfWeek.Saturday || DateTime.Now.DayOfWeek == DayOfWeek.Sunday)
+            {
+                Console.WriteLine("Bon week-end " + aun + ".");
+            }
+            Console.ReadKey();
         }       
-        static string MessagePourUtilisateur()
+        static string MsgToUser1()
         {
-            string nomutilisateur = Environment.UserName;
-            string mbjrsem = Console.WriteLine("Bonjour " + nomutilisateur + ".");
-
+            string aun = Environment.UserName;
+            return aun;
         }
     }
 }
