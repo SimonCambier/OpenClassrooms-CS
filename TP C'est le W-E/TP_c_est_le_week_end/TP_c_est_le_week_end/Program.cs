@@ -30,7 +30,7 @@ namespace TP_c_est_le_week_end
             {
                 Console.WriteLine("Bon week-end " + aun + ".");
             }
-            if (DateTime.Now.DayOfWeek == DayOfWeek.Saturday || DateTime.Now.DayOfWeek == DayOfWeek.Sunday)
+            else
             {
                 Console.WriteLine("Bon week-end " + aun + ".");
             }
