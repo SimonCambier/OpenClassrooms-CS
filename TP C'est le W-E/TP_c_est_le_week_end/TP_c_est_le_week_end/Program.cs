@@ -26,7 +26,15 @@ namespace TP_c_est_le_week_end
             {
                 Console.WriteLine("Bonjour " + aun + ".");
             }
-            else
+            if (DateTime.Now.DayOfWeek == DayOfWeek.Friday && DateTime.Now.Hour > 18)
+            {
+                Console.WriteLine("Bon week-end " + aun + ".");
+            }
+            if (DateTime.Now.DayOfWeek == DayOfWeek.Monday && DateTime.Now.Hour < 9)
+            {
+                Console.WriteLine("Bonjour " + aun + ".");
+            }
+            if (DateTime.Now.DayOfWeek == DayOfWeek.Saturday || DateTime.Now.DayOfWeek == DayOfWeek.Sunday)
             {
                 Console.WriteLine("Bon week-end " + aun + ".");
             }
